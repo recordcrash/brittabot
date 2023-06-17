@@ -1,0 +1,10 @@
+# ignore
+input/*
+output/*
+.env
+venv
+.idea
+.vscode
+__pycache__
+*.pyc
+*.log
