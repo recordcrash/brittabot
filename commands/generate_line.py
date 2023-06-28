@@ -9,6 +9,9 @@ class GenerateLine(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
+    def get_character(self, message: str):
+        return message.split(" ")[0]
+
     @app_commands.command(name="generateline", description="For now, just a test command with one string argument")
     async def generateline(self, interaction: discord.Interaction, user_input: str):
         # Send auto-destruct message
@@ -16,7 +19,7 @@ class GenerateLine(commands.Cog):
 
         # Dummy task
         print("Starting task")
-        await asyncio.create_task(handle_alchemize(message))
+        await asyncio.create_task(print(msg))
 
         # Send real message when task is resolved
         followup = await interaction.followup.send(f"Test2 with {user_input}")
