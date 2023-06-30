@@ -40,6 +40,7 @@ class CharacterLine(BaseModel):
     line: str = Field(..., description="The line of dialogue")
     tone: Literal["normal", "sarcastic", "angry", "sad", "happy", "scared", "disgusted"] = \
         Field(...)
+    # removed to save money on prompting
     # emotion: Literal["normal", "happy", "sad", "angry", "surprised", "scared", "disgusted"] = \
     #     Field(..., description="The emotion of the character saying the line.")
     # volume: Literal["normal", "whisper", "shout"] = \
